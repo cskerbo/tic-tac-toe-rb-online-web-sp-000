@@ -96,3 +96,7 @@ def current_player(board)
   end
   player
 end
+
+def play(board)
+  turn(board)
+end
