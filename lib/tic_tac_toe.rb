@@ -98,5 +98,5 @@ def current_player(board)
 end
 
 def play(board)
-  turn(board)
+  turn
 end
