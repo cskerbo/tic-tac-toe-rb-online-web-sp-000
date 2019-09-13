@@ -43,6 +43,8 @@ def valid_move?(board, index)
       true
     end
   end
+index.between?(0,8) && !position_taken?(board, index)
+end
 
 def full?(board)
   board.all?{|token| token == "X" || token == "O"}
