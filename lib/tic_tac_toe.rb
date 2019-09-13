@@ -14,7 +14,7 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-def move(board, index, current_player = "X")
+def move(board, index, current_player)
   board[index] = current_player
 end
 
@@ -36,6 +36,13 @@ def won?(board)
     position_taken?(board, combo[0])
   end
 end
+
+def valid_move?(board, index)
+  if index.between?(1,9)
+    if !position_taken?(board, index)
+      true
+    end
+  end
 
 def full?(board)
   board.all?{|token| token == "X" || token == "O"}
